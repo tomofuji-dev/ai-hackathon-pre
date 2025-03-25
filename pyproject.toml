@@ -7,6 +7,11 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
+jupyterlab = "^4.3.6"
+librosa = "^0.11.0"
+torch = "^2.6.0"
+transformers = "^4.50.0"
+jupyterlab-widgets = "^3.0.13"
 
 
 [build-system]
