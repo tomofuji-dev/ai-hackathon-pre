@@ -22,8 +22,8 @@ echo 'export PATH="${ASDF_DATA_DIR:-$HOME/.asdf}/shims:$PATH"' >> ~/.zshrc
 ## 0.3. asdf で Python, poetry のインストール
 
 ```
-asdf plugin-add python
-asdf plugin-add poetry
+asdf plugin add python
+asdf plugin add poetry
 asdf install
 ```
 
