@@ -39,6 +39,12 @@ poetry install
 poetry run jupyter lab
 ```
 
+## 1.1. ライブラリの追加
+
+```
+poetry add <package-name>
+```
+
 # 2. `./backend`
 
 ```
