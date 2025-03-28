@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Button from "@mui/material/Button";
-import { useAudio } from "./hooks/useAudio";
+import { useAudio } from "@/hooks/useAudio";
 
 function App() {
   const [file, setFile] = useState<File | null>(null);

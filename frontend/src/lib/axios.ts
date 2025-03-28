@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig, AxiosResponse } from "axios";
-import { Result } from "./result";
+import { Result } from "@/lib/result";
 
 export class AxiosClient {
   async post<T, U>(

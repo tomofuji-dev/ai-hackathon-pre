@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { API_DOMAIN } from "../const";
-import { AxiosClient } from "../lib/axios";
+import { API_DOMAIN } from "@/const";
+import { AxiosClient } from "@/lib/axios";
 
 export interface AudioApiData {
   score: number;
