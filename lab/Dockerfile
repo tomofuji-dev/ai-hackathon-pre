@@ -1,6 +1,9 @@
 FROM python:3.9-slim
 
-RUN apt-get update && apt-get install -y curl build-essential
+RUN apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    apt-get update --fix-missing && \
+    apt-get install -y curl build-essential ffmpeg && \
+    rm -rf /var/lib/apt/lists/*
 
 ENV POETRY_VERSION=1.5.1
 RUN curl -sSL https://install.python-poetry.org | python - --version $POETRY_VERSION
