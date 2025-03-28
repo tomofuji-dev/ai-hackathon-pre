@@ -1,2 +1,1 @@
-export const API_DOMAIN =
-  "http://ec2-43-206-95-25.ap-northeast-1.compute.amazonaws.com:8000";
+export const API_DOMAIN = "http://54.249.18.228:8000";
