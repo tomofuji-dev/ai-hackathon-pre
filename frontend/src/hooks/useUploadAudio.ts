@@ -7,7 +7,7 @@ export interface AudioApiData {
   label: string;
 }
 
-export const useAudio = () => {
+export const useUploadAudio = () => {
   const [data, setData] = useState<AudioApiData | null>(null);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
