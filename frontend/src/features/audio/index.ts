@@ -1,3 +1,1 @@
-import AudioPage from "./AudioPage";
-
-export { AudioPage };
+export { AudioPage } from "./AudioPage";
