@@ -51,7 +51,7 @@ def predict_emotion(audio_path, model, feature_extractor, id2label, max_duration
     predicted_label = id2label[predicted_id]
     return logits[0][predicted_id].item(), predicted_label
 
-@app.post("/wav")
+@app.post("/audio")
 async def predict(file: UploadFile = File(...)):
     # 送信されたファイルを一時的に保存
     contents = await file.read()
