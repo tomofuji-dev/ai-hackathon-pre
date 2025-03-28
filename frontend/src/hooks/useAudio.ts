@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { API_DOMAIN } from "../env";
+import { API_DOMAIN } from "../const";
 import { AxiosClient } from "../lib/axios";
 
 export interface AudioApiData {
