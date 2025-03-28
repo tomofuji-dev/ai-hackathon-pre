@@ -4,6 +4,7 @@ from transformers import AutoModelForAudioClassification, AutoFeatureExtractor
 import librosa
 import torch
 import numpy as np
+import os
 
 app = FastAPI()
 
@@ -61,5 +62,8 @@ async def predict(file: UploadFile = File(...)):
     
     # 感情予測の実行
     score, label = predict_emotion(temp_filename, model, feature_extractor, id2label)
+
+    # tempファイルの削除
+    os.remove(temp_filename)
     
     return {"score": score, "label": label}
