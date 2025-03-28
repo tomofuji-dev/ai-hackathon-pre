@@ -1,10 +1,19 @@
 from fastapi import FastAPI, UploadFile, File
+from fastapi.middleware.cors import CORSMiddleware
 from transformers import AutoModelForAudioClassification, AutoFeatureExtractor
 import librosa
 import torch
 import numpy as np
 
 app = FastAPI()
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # モデルと特徴量抽出器のロード
 model_id = "firdhokk/speech-emotion-recognition-with-openai-whisper-large-v3"
@@ -42,7 +51,7 @@ def predict_emotion(audio_path, model, feature_extractor, id2label, max_duration
     predicted_label = id2label[predicted_id]
     return logits[0][predicted_id].item(), predicted_label
 
-@app.post("/predict")
+@app.post("/wav")
 async def predict(file: UploadFile = File(...)):
     # 送信されたファイルを一時的に保存
     contents = await file.read()
